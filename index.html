@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaiBites - Premium food delivery app. Order delicious meals from top restaurants, enjoy fast delivery and track orders in real-time.">
+    <title>TaiBites | Fast Food Delivery</title>
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Clerk JS SDK CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Decorative orange gradient background spots -->
+    <div class="glow-orb orb-orange"></div>
+    <div class="glow-orb orb-red"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <span class="logo-icon"><span class="material-symbols-rounded">delivery_dining</span></span>
+                <span class="logo-text">Tai<span class="logo-accent">Bites</span></span>
+            </a>
+
+            <!-- Delivery Location Indicator -->
+            <div class="delivery-location">
+                <span class="material-symbols-rounded loc-icon">location_on</span>
+                <span class="loc-text">Home, Bengaluru</span>
+                <span class="material-symbols-rounded drop-icon">keyboard_arrow_down</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="header-actions">
+                <a href="#restaurants" class="nav-btn-link" title="Browse Restaurants">
+                    <span class="material-symbols-rounded">restaurant</span>
+                    <span>Restaurants</span>
+                </a>
+                
+                <!-- Cart Trigger Badge -->
+                <a href="#cart" class="cart-trigger" id="cart-badge-trigger">
+                    <span class="material-symbols-rounded">shopping_bag</span>
+                    <span class="cart-count-badge hidden" id="cart-count">0</span>
+                </a>
+
+                <!-- Clerk Auth Button Wrapper -->
+                <div class="auth-wrapper">
+                    <!-- Loading skeleton -->
+                    <div class="auth-loading" id="auth-loading-spinner"></div>
+                    <!-- User Button or Sign-in button -->
+                    <div id="clerk-user-button"></div>
+                    <div id="clerk-signin-btn" class="hidden">
+                        <button class="signin-btn">
+                            <span>SIGN IN</span>
+                            <span class="material-symbols-rounded">login</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Fallback Mock Auth UI (displayed if Clerk keys are missing/offline) -->
+                    <div id="fallback-auth-ui" class="hidden">
+                        <button class="signin-btn" id="fallback-login-btn">
+                            <span>SIGN IN (MOCK)</span>
+                            <span class="material-symbols-rounded">login</span>
+                        </button>
+                        <div class="fallback-user-menu hidden" id="fallback-user-menu">
+                            <img src="" alt="User Avatar" class="user-avatar" id="fallback-avatar">
+                            <span class="username" id="fallback-username">Girish</span>
+                            <button class="logout-btn" id="fallback-logout-btn" title="Sign Out">
+                                <span class="material-symbols-rounded">logout</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main View Routing Panels -->
+    <main class="app-main">
+        <!-- 1. Home / Landing Page View -->
+        <section id="view-home" class="route-view hidden">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">HUNGRY? WE GOT YOU</span>
+                    <h1>SUPER FAST DELIVERY TO YOUR DOORSTEP</h1>
+                    <p>Order food from your favorite local restaurants, freshly made and delivered hot in minutes.</p>
+                    <div class="hero-actions">
+                        <a href="#restaurants" class="btn btn-primary">
+                            <span>Find Restaurants</span>
+                            <span class="material-symbols-rounded">explore</span>
+                        </a>
+                        <a href="#about" class="btn btn-secondary">Offers Near You</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Carousel -->
+            <div class="category-carousel-section container">
+                <div class="section-header">
+                    <h2>WHAT'S ON YOUR MIND?</h2>
+                </div>
+                <div class="category-list">
+                    <div class="category-item" data-cuisine="burger">
+                        <img src="https://picsum.photos/120/120?random=20" alt="Burgers">
+                        <span>Burgers</span>
+                    </div>
+                    <div class="category-item" data-cuisine="indian">
+                        <img src="https://picsum.photos/120/120?random=21" alt="Indian">
+                        <span>North Indian</span>
+                    </div>
+                    <div class="category-item" data-cuisine="pizza">
+                        <img src="https://picsum.photos/120/120?random=22" alt="Pizza">
+                        <span>Pizzas</span>
+                    </div>
+                    <div class="category-item" data-cuisine="asian">
+                        <img src="https://picsum.photos/120/120?random=23" alt="Asian">
+                        <span>Asian Foods</span>
+                    </div>
+                    <div class="category-item" data-cuisine="dessert">
+                        <img src="https://picsum.photos/120/120?random=24" alt="Desserts">
+                        <span>Desserts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Restaurants Section -->
+            <div class="top-rated-section container">
+                <div class="section-header">
+                    <h2>TOP-RATED RESTAURANTS</h2>
+                    <a href="#restaurants" class="explore-all-link">Browse all <span class="material-symbols-rounded">chevron_right</span></a>
+                </div>
+                <div class="restaurant-grid" id="featured-restaurants-grid">
+                    <!-- Dynamically populated top 3 restaurants -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Restaurant Listing View -->
+        <section id="view-restaurants" class="route-view hidden container">
+            <!-- Filter Bar -->
+            <div class="filters-container">
+                <div class="filters-search-row">
+                    <div class="search-input-wrap">
+                        <span class="material-symbols-rounded">search</span>
+                        <input type="text" id="restaurant-search" placeholder="Search restaurant or dish...">
+                    </div>
+                    <div class="quick-tags">
+                        <button class="filter-tag active" data-cuisine="all">All Cuisines</button>
+                        <button class="filter-tag" data-cuisine="burger">Burgers</button>
+                        <button class="filter-tag" data-cuisine="indian">North Indian</button>
+                        <button class="filter-tag" data-cuisine="pizza">Pizzas</button>
+                        <button class="filter-tag" data-cuisine="asian">Asian</button>
+                        <button class="filter-tag" data-cuisine="dessert">Desserts</button>
+                    </div>
+                </div>
+                
+                <div class="filters-actions-row">
+                    <span class="res-count-label" id="res-count-total">6 Restaurants</span>
+                    <div class="interactive-toggles">
+                        <label class="toggle-control">
+                            <input type="checkbox" id="toggle-veg-only">
+                            <span class="toggle-slider"></span>
+                            <span>Pure Veg</span>
+                        </label>
+                        <label class="toggle-control">
+                            <input type="checkbox" id="toggle-top-rated">
+                            <span class="toggle-slider"></span>
+                            <span>Rating 4.4+</span>
+                        </label>
+                        <label class="toggle-control">
+                            <input type="checkbox" id="toggle-fast-delivery">
+                            <span class="toggle-slider"></span>
+                            <span>Fast Delivery (&lt;30m)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Grid Layout -->
+            <div class="restaurant-grid" id="all-restaurants-grid" style="margin-top: 24px;">
+                <!-- Dynamically populated list -->
+            </div>
+        </section>
+
+        <!-- 3. Restaurant Menu Page View -->
+        <section id="view-menu" class="route-view hidden container">
+            <!-- Back navigation -->
+            <a href="#restaurants" class="back-link">
+                <span class="material-symbols-rounded">arrow_back</span>
+                <span>Back to Restaurants</span>
+            </a>
+
+            <!-- Restaurant Detail Banner -->
+            <div class="restaurant-banner-card" id="menu-restaurant-details">
+                <!-- Dynamically loaded details -->
+            </div>
+
+            <!-- Menu Content Layout -->
+            <div class="menu-layout">
+                <!-- Sidebar Category Nav -->
+                <aside class="menu-categories-nav" id="menu-categories-sidebar">
+                    <!-- Categories -->
+                </aside>
+
+                <!-- Menu Items Grid -->
+                <div class="menu-items-section">
+                    <h3 class="menu-section-title" id="active-menu-category-title">All Menu Items</h3>
+                    <div class="menu-items-list" id="menu-items-container">
+                        <!-- Dynamically loaded items -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Cart View -->
+        <section id="view-cart" class="route-view hidden container">
+            <div class="section-header">
+                <h2>YOUR FOOD CART</h2>
+            </div>
+
+            <div class="cart-layout" id="cart-content-layout">
+                <!-- Loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- 5. Order Checkout Confirm Page (Clerk Google Login Locked) -->
+        <section id="view-checkout" class="route-view hidden container">
+            <div class="section-header">
+                <h2>ORDER CHECKOUT</h2>
+            </div>
+
+            <!-- Locked Screen for Guests -->
+            <div class="checkout-locked-screen hidden" id="checkout-lock-screen">
+                <div class="lock-icon-wrap">
+                    <span class="material-symbols-rounded">lock</span>
+                </div>
+                <h3>AUTHENTICATION REQUIRED</h3>
+                <p>To finalize your food order, please log in with your Google account. We use Clerk to guarantee secure, instant authentication.</p>
+                <div class="lock-actions">
+                    <button class="btn btn-primary" id="checkout-login-trigger">
+                        <span>Sign In with Google</span>
+                        <span class="material-symbols-rounded">login</span>
+                    </button>
+                    <a href="#cart" class="btn btn-secondary">Return to Cart</a>
+                </div>
+            </div>
+
+            <!-- Checkout Form & Summary -->
+            <div class="checkout-unlocked-layout hidden" id="checkout-unlocked-layout">
+                <!-- Delivery Info Form -->
+                <form id="delivery-address-form" class="checkout-form">
+                    <h3>DELIVERY ADDRESS</h3>
+                    
+                    <div class="form-group">
+                        <label for="delivery-name">Full Name</label>
+                        <input type="text" id="delivery-name" required placeholder="Girish Kumar">
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="delivery-phone">Mobile Phone Number</label>
+                        <input type="tel" id="delivery-phone" required placeholder="+91 98765 43210">
+                        <span class="error-msg" id="phone-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="delivery-address">Street Address / Flat No.</label>
+                        <input type="text" id="delivery-address" required placeholder="42, Block C, Green Meadows Apartments">
+                        <span class="error-msg" id="address-error"></span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="delivery-landmark">Landmark (Optional)</label>
+                            <input type="text" id="delivery-landmark" placeholder="Near Oakridge High School">
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-zip">ZIP / PIN Code</label>
+                            <input type="text" id="delivery-zip" required placeholder="560102">
+                            <span class="error-msg" id="zip-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="payment-method-group">
+                        <h3>PAYMENT METHOD</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="cod" checked>
+                                <span class="material-symbols-rounded">payments</span>
+                                <span>Cash on Delivery</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="upi">
+                                <span class="material-symbols-rounded">account_balance_wallet</span>
+                                <span>UPI / Wallet Payment</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>CONFIRM &amp; PLACE ORDER</span>
+                        <span class="material-symbols-rounded">restaurant_menu</span>
+                    </button>
+                </form>
+
+                <!-- Order items summary -->
+                <aside class="checkout-summary-panel">
+                    <h3>ORDER SUMMARY</h3>
+                    <div id="checkout-summary-items">
+                        <!-- Loaded list -->
+                    </div>
+                    <div class="summary-totals" id="checkout-summary-totals">
+                        <!-- Loaded price -->
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- 6. Order Success Tracker Screen -->
+        <section id="view-order-success" class="route-view hidden container">
+            <div class="success-state">
+                <div class="success-icon-wrap">
+                    <span class="material-symbols-rounded">celebration</span>
+                </div>
+                <h3>ORDER RECEIVED!</h3>
+                <p>Your meal is being prepared and will be delivered hot shortly.</p>
+                
+                <!-- Live Order Tracking Visualizer -->
+                <div class="tracking-timeline">
+                    <div class="timeline-step active" id="step-placed">
+                        <div class="step-icon-wrap"><span class="material-symbols-rounded">assignment_turned_in</span></div>
+                        <span>Placed</span>
+                    </div>
+                    <div class="timeline-connector active" id="conn-1"></div>
+                    
+                    <div class="timeline-step active" id="step-kitchen">
+                        <div class="step-icon-wrap"><span class="material-symbols-rounded">cooking</span></div>
+                        <span>Kitchen</span>
+                    </div>
+                    <div class="timeline-connector" id="conn-2"></div>
+
+                    <div class="timeline-step" id="step-delivery">
+                        <div class="step-icon-wrap"><span class="material-symbols-rounded">delivery_dining</span></div>
+                        <span>Transit</span>
+                    </div>
+                    <div class="timeline-connector" id="conn-3"></div>
+
+                    <div class="timeline-step" id="step-delivered">
+                        <div class="step-icon-wrap"><span class="material-symbols-rounded">sports_motorsports</span></div>
+                        <span>Arrived</span>
+                    </div>
+                </div>
+
+                <!-- Receipt detail block -->
+                <div class="receipt-stub">
+                    <div class="receipt-header">
+                        <h4>TAIBITES DELIVERY</h4>
+                        <span class="receipt-status">PREPARING</span>
+                    </div>
+                    <div class="receipt-body">
+                        <div class="receipt-row">
+                            <span>Order Reference:</span>
+                            <strong id="receipt-ref">TAIBITES-88190-G</strong>
+                        </div>
+                        <div class="receipt-row">
+                            <span>Delivery to:</span>
+                            <span id="receipt-address">Green Meadows, Bengaluru</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span>Est. Arrival:</span>
+                            <strong id="receipt-eta">30 Minutes</strong>
+                        </div>
+                        <div class="receipt-row" style="border-top:1px dashed rgba(255,255,255,0.08); padding-top:10px; margin-top:8px">
+                            <span>Total Charged:</span>
+                            <strong id="receipt-total">$18.50</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#restaurants" class="btn btn-secondary btn-block">Order Something Else</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container flex-between">
+            <p>&copy; 2026 TaiBites India S.A. All rights reserved. Powered by Clerk.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
