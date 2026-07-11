@@ -53,7 +53,10 @@
                     <!-- Loading skeleton -->
                     <div class="auth-loading" id="auth-loading-spinner"></div>
                     <!-- User Button or Sign-in button -->
-                    <div id="clerk-user-button"></div>
+                    <div id="clerk-user-info" class="hidden" style="display: flex; align-items: center; gap: 10px;">
+                        <span class="username" id="clerk-username" style="font-size: 0.85rem; font-weight: 600; color: var(--text-light);"></span>
+                        <div id="clerk-user-button"></div>
+                    </div>
                     <div id="clerk-signin-btn" class="hidden">
                         <button class="signin-btn">
                             <span>SIGN IN</span>
