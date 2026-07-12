@@ -11,14 +11,14 @@ const restaurantsData = [
         rating: 4.4,
         reviews: 240,
         deliveryTime: 25,
-        costForTwo: 20,
+        costForTwo: 400,
         isVegOnly: false,
         menu: [
-            { id: "item-101", name: "Classic Veg Crunch Burger", price: 6.99, desc: "Crispy vegetable patty with fresh lettuce, tomato, onions and our signature club sauce.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=40" },
-            { id: "item-102", name: "Spicy Smoked Chicken Burger", price: 8.49, desc: "Flame-grilled smoked chicken breast coated in spicy habanero sauce with cheddar cheese.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=41" },
-            { id: "item-103", name: "Cheesy Loaded Fries", price: 4.99, desc: "Golden crinkle-cut fries topped with melted mozzarella cheese sauce and jalapeno toppings.", category: "sides", isVeg: true, image: "https://picsum.photos/120/120?random=42" },
-            { id: "item-104", name: "Classic Salted Fries", price: 2.99, desc: "Crispy french fries tossed with sea salt.", category: "sides", isVeg: true, image: "https://picsum.photos/120/120?random=43" },
-            { id: "item-105", name: "Double Chocolate Oreo Shake", price: 4.49, desc: "Thick vanilla milkshake blended with crunchy chocolate cookies and whipped cream.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=44" }
+            { id: "item-101", name: "Classic Veg Crunch Burger", price: 149.00, desc: "Crispy vegetable patty with fresh lettuce, tomato, onions and our signature club sauce.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=40" },
+            { id: "item-102", name: "Spicy Smoked Chicken Burger", price: 199.00, desc: "Flame-grilled smoked chicken breast coated in spicy habanero sauce with cheddar cheese.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=41" },
+            { id: "item-103", name: "Cheesy Loaded Fries", price: 129.00, desc: "Golden crinkle-cut fries topped with melted mozzarella cheese sauce and jalapeno toppings.", category: "sides", isVeg: true, image: "https://picsum.photos/120/120?random=42" },
+            { id: "item-104", name: "Classic Salted Fries", price: 99.00, desc: "Crispy french fries tossed with sea salt.", category: "sides", isVeg: true, image: "https://picsum.photos/120/120?random=43" },
+            { id: "item-105", name: "Double Chocolate Oreo Shake", price: 119.00, desc: "Thick vanilla milkshake blended with crunchy chocolate cookies and whipped cream.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=44" }
         ]
     },
     {
@@ -30,13 +30,13 @@ const restaurantsData = [
         rating: 4.5,
         reviews: 410,
         deliveryTime: 35,
-        costForTwo: 30,
+        costForTwo: 600,
         isVegOnly: false,
         menu: [
-            { id: "item-201", name: "Butter Chicken Masala", price: 11.99, desc: "Tender boneless chicken roasted in tandoor, cooked in rich creamy tomato butter gravy.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=45" },
-            { id: "item-202", name: "Paneer Butter Masala", price: 9.99, desc: "Fresh cottage cheese chunks cooked in rich onion tomato butter cream gravy.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=46" },
-            { id: "item-203", name: "Garlic Tandoori Naan", price: 2.49, desc: "Soft leavened tandoor-baked flatbread infused with fresh minced garlic and butter.", category: "breads", isVeg: true, image: "https://picsum.photos/120/120?random=47" },
-            { id: "item-204", name: "Jeera Basmati Rice", price: 3.49, desc: "Aromatic long-grain basmati rice steamed with cumin seeds and pure ghee.", category: "breads", isVeg: true, image: "https://picsum.photos/120/120?random=48" }
+            { id: "item-201", name: "Butter Chicken Masala", price: 349.00, desc: "Tender boneless chicken roasted in tandoor, cooked in rich creamy tomato butter gravy.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=45" },
+            { id: "item-202", name: "Paneer Butter Masala", price: 299.00, desc: "Fresh cottage cheese chunks cooked in rich onion tomato butter cream gravy.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=46" },
+            { id: "item-203", name: "Garlic Tandoori Naan", price: 69.00, desc: "Soft leavened tandoor-baked flatbread infused with fresh minced garlic and butter.", category: "breads", isVeg: true, image: "https://picsum.photos/120/120?random=47" },
+            { id: "item-204", name: "Jeera Basmati Rice", price: 129.00, desc: "Aromatic long-grain basmati rice steamed with cumin seeds and pure ghee.", category: "breads", isVeg: true, image: "https://picsum.photos/120/120?random=48" }
         ]
     },
     {
@@ -48,13 +48,13 @@ const restaurantsData = [
         rating: 4.6,
         reviews: 180,
         deliveryTime: 20,
-        costForTwo: 18,
+        costForTwo: 350,
         isVegOnly: true,
         menu: [
-            { id: "item-301", name: "Avocado Quinoa Salad", price: 7.99, desc: "Fresh avocado slices, organic quinoa, cherry tomatoes, and cucumber tossed in lemon vinaigrette.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=49" },
-            { id: "item-302", name: "Paneer Pesto Grilled Sandwich", price: 6.49, desc: "Multi-grain toasted bread stuffed with fresh basil pesto sauce, paneer cubes, and cheese.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=50" },
-            { id: "item-303", name: "Detox Green Juice", price: 3.99, desc: "Fresh cold-pressed cucumber, green apple, spinach, celery, mint, and lemon juice.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=51" },
-            { id: "item-304", name: "Energy Fruit Bowl", price: 4.99, desc: "A mix of fresh strawberries, blueberries, kiwi, banana, and pomegranate with honey glaze.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=52" }
+            { id: "item-301", name: "Avocado Quinoa Salad", price: 199.00, desc: "Fresh avocado slices, organic quinoa, cherry tomatoes, and cucumber tossed in lemon vinaigrette.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=49" },
+            { id: "item-302", name: "Paneer Pesto Grilled Sandwich", price: 149.00, desc: "Multi-grain toasted bread stuffed with fresh basil pesto sauce, paneer cubes, and cheese.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=50" },
+            { id: "item-303", name: "Detox Green Juice", price: 99.00, desc: "Fresh cold-pressed cucumber, green apple, spinach, celery, mint, and lemon juice.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=51" },
+            { id: "item-304", name: "Energy Fruit Bowl", price: 129.00, desc: "A mix of fresh strawberries, blueberries, kiwi, banana, and pomegranate with honey glaze.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=52" }
         ]
     },
     {
@@ -66,12 +66,12 @@ const restaurantsData = [
         rating: 4.2,
         reviews: 320,
         deliveryTime: 30,
-        costForTwo: 25,
+        costForTwo: 500,
         isVegOnly: false,
         menu: [
-            { id: "item-401", name: "Chili Garlic Hakka Noodles", price: 8.99, desc: "Stir-fried noodles with mixed julienne vegetables, burnt garlic, and red chili paste.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=53" },
-            { id: "item-402", name: "Spicy Schezwan Chicken", price: 10.49, desc: "Tender chicken cubes stir-fried in hot Schezwan pepper sauce with spring onions.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=54" },
-            { id: "item-403", name: "Steamed Vegetable Dumplings", price: 5.49, desc: "Delicate wrappers stuffed with cabbage, carrot, and water chestnuts, steamed to perfection.", category: "appetizers", isVeg: true, image: "https://picsum.photos/120/120?random=55" }
+            { id: "item-401", name: "Chili Garlic Hakka Noodles", price: 189.00, desc: "Stir-fried noodles with mixed julienne vegetables, burnt garlic, and red chili paste.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=53" },
+            { id: "item-402", name: "Spicy Schezwan Chicken", price: 249.00, desc: "Tender chicken cubes stir-fried in hot Schezwan pepper sauce with spring onions.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=54" },
+            { id: "item-403", name: "Steamed Vegetable Dumplings", price: 129.00, desc: "Delicate wrappers stuffed with cabbage, carrot, and water chestnuts, steamed to perfection.", category: "appetizers", isVeg: true, image: "https://picsum.photos/120/120?random=55" }
         ]
     },
     {
@@ -83,12 +83,12 @@ const restaurantsData = [
         rating: 4.7,
         reviews: 580,
         deliveryTime: 38,
-        costForTwo: 35,
+        costForTwo: 700,
         isVegOnly: false,
         menu: [
-            { id: "item-501", name: "Margherita Woodfired Pizza", price: 10.99, desc: "Sourdough crust topped with classic Italian tomato sauce, fresh mozzarella cheese and fresh basil.", category: "pizzas", isVeg: true, image: "https://picsum.photos/120/120?random=56" },
-            { id: "item-502", name: "Double Pepperoni Pizza", price: 13.99, desc: "Rich tomato base loaded with spicy cured beef pepperoni slices and extra mozzarella.", category: "pizzas", isVeg: false, image: "https://picsum.photos/120/120?random=57" },
-            { id: "item-503", name: "Creamy Alfredo Penne Pasta", price: 9.49, desc: "Penne pasta cooked in rich garlic cream parmesan cheese sauce with fresh mushrooms.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=58" }
+            { id: "item-501", name: "Margherita Woodfired Pizza", price: 249.00, desc: "Sourdough crust topped with classic Italian tomato sauce, fresh mozzarella cheese and fresh basil.", category: "pizzas", isVeg: true, image: "https://picsum.photos/120/120?random=56" },
+            { id: "item-502", name: "Double Pepperoni Pizza", price: 349.00, desc: "Rich tomato base loaded with spicy cured beef pepperoni slices and extra mozzarella.", category: "pizzas", isVeg: false, image: "https://picsum.photos/120/120?random=57" },
+            { id: "item-503", name: "Creamy Alfredo Penne Pasta", price: 219.00, desc: "Penne pasta cooked in rich garlic cream parmesan cheese sauce with fresh mushrooms.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=58" }
         ]
     },
     {
@@ -100,12 +100,12 @@ const restaurantsData = [
         rating: 4.3,
         reviews: 150,
         deliveryTime: 18,
-        costForTwo: 15,
+        costForTwo: 300,
         isVegOnly: true,
         menu: [
-            { id: "item-601", name: "Belgian Chocolate Loaded Waffle", price: 5.99, desc: "Crispy freshly baked waffle topped with milk chocolate chips, hot fudge and dark cocoa sauce.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=59" },
-            { id: "item-602", name: "Red Velvet Jar Cake", price: 4.49, desc: "Layered sponge cake with premium cream cheese icing packed in a cute glass jar.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=60" },
-            { id: "item-603", name: "Cold Brew Affogato", price: 3.99, desc: "A double scoop of vanilla ice cream drowned in a shot of bold cold brew espresso.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=61" }
+            { id: "item-601", name: "Belgian Chocolate Loaded Waffle", price: 149.00, desc: "Crispy freshly baked waffle topped with milk chocolate chips, hot fudge and dark cocoa sauce.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=59" },
+            { id: "item-602", name: "Red Velvet Jar Cake", price: 119.00, desc: "Layered sponge cake with premium cream cheese icing packed in a cute glass jar.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=60" },
+            { id: "item-603", name: "Cold Brew Affogato", price: 99.00, desc: "A double scoop of vanilla ice cream drowned in a shot of bold cold brew espresso.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=61" }
         ]
     }
 ];
@@ -119,15 +119,8 @@ let clerkInstance = null;
 let currentActiveCuisine = "all";
 let trackingTimer = null;
 
-// Replace with a dummy Clerk Publishable Key for initialization test, or look in localStorage/URL
-let CLERK_PUBLISHABLE_KEY = localStorage.getItem("CLERK_PUBLISHABLE_KEY") || "pk_test_Y2xlcmsuYWNjb3VudHMuZGV2JA";
-
-// Allow setting the key via query param for testing: ?clerk_key=pk_test_...
-const urlParamsForKey = new URLSearchParams(window.location.search);
-if (urlParamsForKey.has("clerk_key")) {
-    CLERK_PUBLISHABLE_KEY = urlParamsForKey.get("clerk_key");
-    localStorage.setItem("CLERK_PUBLISHABLE_KEY", CLERK_PUBLISHABLE_KEY);
-}
+// Replace with Clerk Publishable Key
+const CLERK_PUBLISHABLE_KEY = "pk_test_Z3JhbmQtcXVldHphbC0yLmNsZXJrLmFjY291bnRzLmRldiQ";
 
 // 3. App Controller Initialization
 window.addEventListener("DOMContentLoaded", async () => {
@@ -216,14 +209,36 @@ function setupRouter() {
     });
 }
 
+// Helper to wait for Clerk to be defined on window
+function waitForClerk() {
+    return new Promise((resolve) => {
+        if (window.Clerk) {
+            resolve(window.Clerk);
+            return;
+        }
+        let attempts = 0;
+        const interval = setInterval(() => {
+            attempts++;
+            if (window.Clerk) {
+                clearInterval(interval);
+                resolve(window.Clerk);
+            } else if (attempts > 50) { // 2.5 seconds timeout
+                clearInterval(interval);
+                resolve(null);
+            }
+        }, 50);
+    });
+}
+
 // 5. Authentication Initialization (Clerk with Mock Fallback)
 async function initAuth() {
     const loadingSpinner = document.getElementById("auth-loading-spinner");
     const clerkSignBtn = document.getElementById("clerk-signin-btn");
 
-    if (window.Clerk) {
+    const clerk = await waitForClerk();
+    if (clerk) {
         try {
-            clerkInstance = window.Clerk;
+            clerkInstance = clerk;
             await clerkInstance.load({ publishableKey: CLERK_PUBLISHABLE_KEY });
             isClerkActive = true;
             loadingSpinner.classList.add("hidden");
@@ -273,13 +288,13 @@ async function initAuth() {
 
             // Wire Sign In triggers
             clerkSignBtn.querySelector("button").addEventListener("click", () => {
-                clerkInstance.openSignIn();
+                clerkInstance.redirectToSignIn({ redirectUrl: window.location.href });
             });
             
             const checkoutLoginTrigger = document.getElementById("checkout-login-trigger");
             if (checkoutLoginTrigger) {
                 checkoutLoginTrigger.addEventListener("click", () => {
-                    clerkInstance.openSignIn();
+                    clerkInstance.redirectToSignIn({ redirectUrl: window.location.href });
                 });
             }
 
@@ -308,8 +323,8 @@ function activateMockAuth() {
     function loginMock() {
         isMockLoggedIn = true;
         currentUser = {
-            name: "Girish Kumar",
-            email: "girish@domain.com",
+            name: "Girish Naik",
+            email: "girish.naik@domain.com",
             avatar: "https://picsum.photos/100/100?random=50"
         };
 
@@ -450,7 +465,7 @@ function removeFromCart(itemId) {
 
 function getCartTotals() {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-    const deliveryFee = subtotal > 30.00 || subtotal === 0 ? 0.00 : 4.00;
+    const deliveryFee = subtotal > 300 || subtotal === 0 ? 0.00 : 40.00;
     const GST = subtotal * 0.05; // 5% GST on food
     const grandTotal = subtotal + deliveryFee + GST;
 
@@ -490,7 +505,7 @@ function renderFeaturedRestaurants() {
                         <span>${r.rating.toFixed(1)}</span>
                     </span>
                     <span class="res-time">${r.deliveryTime} Mins</span>
-                    <span class="res-cost">$${r.costForTwo} for two</span>
+                    <span class="res-cost">₹${r.costForTwo} for two</span>
                 </div>
             </div>
         </a>
@@ -541,7 +556,7 @@ function renderAllRestaurants() {
                         <span>${r.rating.toFixed(1)}</span>
                     </span>
                     <span class="res-time">${r.deliveryTime} Mins</span>
-                    <span class="res-cost">$${r.costForTwo} for two</span>
+                    <span class="res-cost">₹${r.costForTwo} for two</span>
                 </div>
             </div>
         </a>
@@ -567,7 +582,7 @@ function renderRestaurantMenu(id) {
             <p>${res.cuisineLabel} • Bengaluru</p>
             <div class="res-banner-badges">
                 <span><span class="material-symbols-rounded">schedule</span>${res.deliveryTime} Mins</span>
-                <span><span class="material-symbols-rounded">payments</span>$${res.costForTwo} For Two</span>
+                <span><span class="material-symbols-rounded">payments</span>₹${res.costForTwo} For Two</span>
                 <span class="${res.isVegOnly ? 'badge-val-green' : ''}">
                     <span class="material-symbols-rounded">restaurant</span>${res.isVegOnly ? 'Pure Veg' : 'Veg & Non-Veg'}
                 </span>
@@ -652,7 +667,7 @@ function renderMenuItems(itemsList, resId, resName) {
                         <span class="veg-label">${item.isVeg ? 'VEG' : 'NON-VEG'}</span>
                     </div>
                     <h4>${item.name}</h4>
-                    <div class="item-card-price">$${item.price.toFixed(2)}</div>
+                    <div class="item-card-price">₹${item.price.toFixed(2)}</div>
                     <p class="item-card-desc">${item.desc}</p>
                 </div>
                 
@@ -724,7 +739,7 @@ function renderCartPage() {
                 <button class="qty-btn" onclick="adjustCartQty('${item.id}', 1)">+</button>
             </div>
 
-            <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
+            <div class="cart-item-price">₹${(item.price * item.qty).toFixed(2)}</div>
 
             <button class="remove-cart-item-btn" onclick="removeFromCart('${item.id}')" title="Remove Item">
                 <span class="material-symbols-rounded">delete</span>
@@ -746,19 +761,19 @@ function renderCartPage() {
             <h3>BILL DETAIL</h3>
             <div class="summary-row">
                 <span>Item Total</span>
-                <span>$${totals.subtotal.toFixed(2)}</span>
+                <span>₹${totals.subtotal.toFixed(2)}</span>
             </div>
             <div class="summary-row">
                 <span>Govt Taxes &amp; GST (5%)</span>
-                <span>$${totals.GST.toFixed(2)}</span>
+                <span>₹${totals.GST.toFixed(2)}</span>
             </div>
             <div class="summary-row">
                 <span>Delivery Partner Fee</span>
-                <span>${totals.deliveryFee === 0 ? 'FREE' : '$' + totals.deliveryFee.toFixed(2)}</span>
+                <span>${totals.deliveryFee === 0 ? 'FREE' : '₹' + totals.deliveryFee.toFixed(2)}</span>
             </div>
             <div class="summary-row total-row">
                 <span>To Pay</span>
-                <span>$${totals.grandTotal.toFixed(2)}</span>
+                <span>₹${totals.grandTotal.toFixed(2)}</span>
             </div>
             
             <a href="#checkout" class="btn btn-primary btn-block checkout-action-btn">
@@ -797,7 +812,7 @@ function renderCheckoutPage() {
         <div class="checkout-summary-item">
             <span class="item-title">${item.name}</span>
             <span class="item-qty">x${item.qty}</span>
-            <span class="item-price">$${(item.price * item.qty).toFixed(2)}</span>
+            <span class="item-price">₹${(item.price * item.qty).toFixed(2)}</span>
         </div>
     `).join("");
 
@@ -807,19 +822,19 @@ function renderCheckoutPage() {
     totalsContainer.innerHTML = `
         <div class="summary-row">
             <span>Item Subtotal</span>
-            <span>$${totals.subtotal.toFixed(2)}</span>
+            <span>₹${totals.subtotal.toFixed(2)}</span>
         </div>
         <div class="summary-row">
             <span>Delivery Fee</span>
-            <span>${totals.deliveryFee === 0 ? 'FREE' : '$' + totals.deliveryFee.toFixed(2)}</span>
+            <span>${totals.deliveryFee === 0 ? 'FREE' : '₹' + totals.deliveryFee.toFixed(2)}</span>
         </div>
         <div class="summary-row">
             <span>Govt Tax (5%)</span>
-            <span>$${totals.GST.toFixed(2)}</span>
+            <span>₹${totals.GST.toFixed(2)}</span>
         </div>
         <div class="summary-row total-row" style="margin-top: 12px; border-top:1px solid var(--border-color); padding-top:12px">
             <span>Grand Total</span>
-            <span>$${totals.grandTotal.toFixed(2)}</span>
+            <span>₹${totals.grandTotal.toFixed(2)}</span>
         </div>
     `;
 
@@ -833,7 +848,7 @@ function renderCheckoutPage() {
 function renderOrderSuccessPage(ref, client, total, address) {
     document.getElementById("receipt-ref").textContent = ref;
     document.getElementById("receipt-address").textContent = address;
-    document.getElementById("receipt-total").textContent = `$${parseFloat(total).toFixed(2)}`;
+    document.getElementById("receipt-total").textContent = `₹${parseFloat(total).toFixed(2)}`;
     
     const steps = [
         { el: document.getElementById("step-placed"), conn: null },

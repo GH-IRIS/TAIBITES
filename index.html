@@ -11,8 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
-    <!-- Clerk JS SDK CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js" crossorigin="anonymous"></script>
+    <!-- Clerk JS SDK -->
+    <script
+      defer
+      crossorigin="anonymous"
+      src="https://grand-quetzal-2.clerk.accounts.dev/npm/@clerk/ui@1/dist/ui.browser.js"
+      type="text/javascript">
+    </script>
+    <script
+      defer
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_Z3JhbmQtcXVldHphbC0yLmNsZXJrLmFjY291bnRzLmRldiQ"
+      src="https://grand-quetzal-2.clerk.accounts.dev/npm/@clerk/clerk-js@6/dist/clerk.browser.js"
+      type="text/javascript">
+    </script>
 </head>
 <body>
     <!-- Decorative orange gradient background spots -->
@@ -72,7 +84,7 @@
                         </button>
                         <div class="fallback-user-menu hidden" id="fallback-user-menu">
                             <img src="" alt="User Avatar" class="user-avatar" id="fallback-avatar">
-                            <span class="username" id="fallback-username">Girish</span>
+                            <span class="username" id="fallback-username">Girish Naik</span>
                             <button class="logout-btn" id="fallback-logout-btn" title="Sign Out">
                                 <span class="material-symbols-rounded">logout</span>
                             </button>
@@ -263,7 +275,7 @@
                     
                     <div class="form-group">
                         <label for="delivery-name">Full Name</label>
-                        <input type="text" id="delivery-name" required placeholder="Girish Kumar">
+                        <input type="text" id="delivery-name" required placeholder="Girish Naik">
                         <span class="error-msg" id="name-error"></span>
                     </div>
 
@@ -382,7 +394,7 @@
                         </div>
                         <div class="receipt-row" style="border-top:1px dashed rgba(255,255,255,0.08); padding-top:10px; margin-top:8px">
                             <span>Total Charged:</span>
-                            <strong id="receipt-total">$18.50</strong>
+                            <strong id="receipt-total">₹450.00</strong>
                         </div>
                     </div>
                 </div>
@@ -403,6 +415,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>
