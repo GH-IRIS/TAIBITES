@@ -239,9 +239,19 @@ async function initAuth() {
     if (clerk) {
         try {
             clerkInstance = clerk;
-            await clerkInstance.load({ publishableKey: CLERK_PUBLISHABLE_KEY });
+            await clerkInstance.load({
+                publishableKey: CLERK_PUBLISHABLE_KEY,
+                afterSignInUrl: window.location.origin + window.location.pathname + "#checkout",
+                afterSignUpUrl: window.location.origin + window.location.pathname + "#checkout"
+            });
             isClerkActive = true;
             loadingSpinner.classList.add("hidden");
+            
+            // Explicitly hide mock auth UI since Clerk loaded successfully
+            const fallbackUi = document.getElementById("fallback-auth-ui");
+            if (fallbackUi) {
+                fallbackUi.classList.add("hidden");
+            }
             
             // Listen for auth state changes
             clerkInstance.addListener(({ user }) => {
