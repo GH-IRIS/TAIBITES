@@ -40,11 +40,10 @@
                 <span class="logo-text">Tai<span class="logo-accent">Bites</span></span>
             </a>
 
-            <!-- Delivery Location Indicator -->
-            <div class="delivery-location">
-                <span class="material-symbols-rounded loc-icon">location_on</span>
-                <span class="loc-text">Home, Bengaluru</span>
-                <span class="material-symbols-rounded drop-icon">keyboard_arrow_down</span>
+            <!-- Global Search Bar -->
+            <div class="search-bar-wrap">
+                <span class="material-symbols-rounded search-icon">search</span>
+                <input type="text" id="global-food-search" placeholder="Search restaurants, dishes, cuisines...">
             </div>
 
             <!-- Navigation Links -->
@@ -100,19 +99,65 @@
         <!-- 1. Home / Landing Page View -->
         <section id="view-home" class="route-view hidden">
             <!-- Hero Banner -->
-            <div class="hero-banner">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-tag">HUNGRY? WE GOT YOU</span>
-                    <h1>SUPER FAST DELIVERY TO YOUR DOORSTEP</h1>
-                    <p>Order food from your favorite local restaurants, freshly made and delivered hot in minutes.</p>
-                    <div class="hero-actions">
-                        <a href="#restaurants" class="btn btn-primary">
-                            <span>Find Restaurants</span>
-                            <span class="material-symbols-rounded">explore</span>
-                        </a>
-                        <a href="#about" class="btn btn-secondary">Offers Near You</a>
+            <!-- Hero Carousel -->
+            <div class="hero-carousel" id="hero-carousel">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active" style="background-image: linear-gradient(rgba(5, 4, 10, 0.4), rgba(5, 4, 10, 0.9)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80')">
+                    <div class="hero-content">
+                        <span class="hero-tag">CRAVING SOMETHING DELICIOUS?</span>
+                        <h1>SUPER FAST DELIVERY TO YOUR DOORSTEP</h1>
+                        <p>Order food from your favorite local restaurants, freshly made and delivered hot in minutes.</p>
+                        <div class="hero-actions">
+                            <a href="#restaurants" class="btn btn-primary">
+                                <span>Find Restaurants</span>
+                                <span class="material-symbols-rounded">explore</span>
+                            </a>
+                            <a href="#restaurants" class="btn btn-secondary">Offers Near You</a>
+                        </div>
                     </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(5, 4, 10, 0.4), rgba(5, 4, 10, 0.9)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1920&q=80')">
+                    <div class="hero-content">
+                        <span class="hero-tag">BURGER CLUB SPECIALS</span>
+                        <h1>JUICY FLAME-GRILLED GOURMET BURGERS</h1>
+                        <p>Freshly baked buns, premium melt-in-your-mouth patties, and signature home-style club sauces.</p>
+                        <div class="hero-actions">
+                            <a href="#menu?id=rest-1" class="btn btn-primary">
+                                <span>Order Burgers</span>
+                                <span class="material-symbols-rounded">lunch_dining</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(5, 4, 10, 0.4), rgba(5, 4, 10, 0.9)), url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1920&q=80')">
+                    <div class="hero-content">
+                        <span class="hero-tag">SPICE & SIZZLE DELIGHTS</span>
+                        <h1>AROMATIC INDIAN TANDOORI FLAVORS</h1>
+                        <p>Rich curries, buttery slow-cooked dal, and hot tandoor-baked garlic naan made fresh on order.</p>
+                        <div class="hero-actions">
+                            <a href="#menu?id=rest-2" class="btn btn-primary">
+                                <span>Order Indian</span>
+                                <span class="material-symbols-rounded">soup_kitchen</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button class="carousel-control prev" id="carousel-prev-btn" aria-label="Previous Slide">
+                    <span class="material-symbols-rounded">chevron_left</span>
+                </button>
+                <button class="carousel-control next" id="carousel-next-btn" aria-label="Next Slide">
+                    <span class="material-symbols-rounded">chevron_right</span>
+                </button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator-dot active" data-index="0"></span>
+                    <span class="indicator-dot" data-index="1"></span>
+                    <span class="indicator-dot" data-index="2"></span>
                 </div>
             </div>
 
@@ -123,23 +168,23 @@
                 </div>
                 <div class="category-list">
                     <div class="category-item" data-cuisine="burger">
-                        <img src="https://picsum.photos/120/120?random=20" alt="Burgers">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=120&h=120&q=80" alt="Burgers">
                         <span>Burgers</span>
                     </div>
                     <div class="category-item" data-cuisine="indian">
-                        <img src="https://picsum.photos/120/120?random=21" alt="Indian">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=120&h=120&q=80" alt="Indian">
                         <span>North Indian</span>
                     </div>
                     <div class="category-item" data-cuisine="pizza">
-                        <img src="https://picsum.photos/120/120?random=22" alt="Pizza">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=120&h=120&q=80" alt="Pizza">
                         <span>Pizzas</span>
                     </div>
                     <div class="category-item" data-cuisine="asian">
-                        <img src="https://picsum.photos/120/120?random=23" alt="Asian">
+                        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=120&h=120&q=80" alt="Asian">
                         <span>Asian Foods</span>
                     </div>
                     <div class="category-item" data-cuisine="dessert">
-                        <img src="https://picsum.photos/120/120?random=24" alt="Desserts">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=120&h=120&q=80" alt="Desserts">
                         <span>Desserts</span>
                     </div>
                 </div>
@@ -153,6 +198,16 @@
                 </div>
                 <div class="restaurant-grid" id="featured-restaurants-grid">
                     <!-- Dynamically populated top 3 restaurants -->
+                </div>
+            </div>
+
+            <!-- Top Dishes Section -->
+            <div class="top-dishes-section container">
+                <div class="section-header">
+                    <h2>TRENDING DISHES</h2>
+                </div>
+                <div class="dish-grid" id="top-dishes-grid">
+                    <!-- Dynamically populated 8 dishes (2 rows of 4) -->
                 </div>
             </div>
         </section>

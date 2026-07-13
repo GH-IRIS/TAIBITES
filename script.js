@@ -7,18 +7,18 @@ const restaurantsData = [
         name: "The Burger Club",
         cuisine: "burger",
         cuisineLabel: "Burgers, Sides, Shakes",
-        image: "https://picsum.photos/400/250?random=30",
+        image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80",
         rating: 4.4,
         reviews: 240,
         deliveryTime: 25,
         costForTwo: 400,
         isVegOnly: false,
         menu: [
-            { id: "item-101", name: "Classic Veg Crunch Burger", price: 149.00, desc: "Crispy vegetable patty with fresh lettuce, tomato, onions and our signature club sauce.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=40" },
-            { id: "item-102", name: "Spicy Smoked Chicken Burger", price: 199.00, desc: "Flame-grilled smoked chicken breast coated in spicy habanero sauce with cheddar cheese.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=41" },
-            { id: "item-103", name: "Cheesy Loaded Fries", price: 129.00, desc: "Golden crinkle-cut fries topped with melted mozzarella cheese sauce and jalapeno toppings.", category: "sides", isVeg: true, image: "https://picsum.photos/120/120?random=42" },
-            { id: "item-104", name: "Classic Salted Fries", price: 99.00, desc: "Crispy french fries tossed with sea salt.", category: "sides", isVeg: true, image: "https://picsum.photos/120/120?random=43" },
-            { id: "item-105", name: "Double Chocolate Oreo Shake", price: 119.00, desc: "Thick vanilla milkshake blended with crunchy chocolate cookies and whipped cream.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=44" }
+            { id: "item-101", name: "Classic Veg Crunch Burger", price: 149.00, desc: "Crispy vegetable patty with fresh lettuce, tomato, onions and our signature club sauce.", category: "mains", isVeg: true, image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-102", name: "Spicy Smoked Chicken Burger", price: 199.00, desc: "Flame-grilled smoked chicken breast coated in spicy habanero sauce with cheddar cheese.", category: "mains", isVeg: false, image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-103", name: "Cheesy Loaded Fries", price: 129.00, desc: "Golden crinkle-cut fries topped with melted mozzarella cheese sauce and jalapeno toppings.", category: "sides", isVeg: true, image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-104", name: "Classic Salted Fries", price: 99.00, desc: "Crispy french fries tossed with sea salt.", category: "sides", isVeg: true, image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-105", name: "Double Chocolate Oreo Shake", price: 119.00, desc: "Thick vanilla milkshake blended with crunchy chocolate cookies and whipped cream.", category: "drinks", isVeg: true, image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=300&q=80" }
         ]
     },
     {
@@ -26,35 +26,35 @@ const restaurantsData = [
         name: "Spice & Sizzle",
         cuisine: "indian",
         cuisineLabel: "North Indian, Tandoori",
-        image: "https://picsum.photos/400/250?random=31",
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80",
         rating: 4.5,
         reviews: 410,
         deliveryTime: 35,
         costForTwo: 600,
         isVegOnly: false,
         menu: [
-            { id: "item-201", name: "Butter Chicken Masala", price: 349.00, desc: "Tender boneless chicken roasted in tandoor, cooked in rich creamy tomato butter gravy.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=45" },
-            { id: "item-202", name: "Paneer Butter Masala", price: 299.00, desc: "Fresh cottage cheese chunks cooked in rich onion tomato butter cream gravy.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=46" },
-            { id: "item-203", name: "Garlic Tandoori Naan", price: 69.00, desc: "Soft leavened tandoor-baked flatbread infused with fresh minced garlic and butter.", category: "breads", isVeg: true, image: "https://picsum.photos/120/120?random=47" },
-            { id: "item-204", name: "Jeera Basmati Rice", price: 129.00, desc: "Aromatic long-grain basmati rice steamed with cumin seeds and pure ghee.", category: "breads", isVeg: true, image: "https://picsum.photos/120/120?random=48" }
+            { id: "item-201", name: "Butter Chicken Masala", price: 349.00, desc: "Tender boneless chicken roasted in tandoor, cooked in rich creamy tomato butter gravy.", category: "mains", isVeg: false, image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-202", name: "Paneer Butter Masala", price: 299.00, desc: "Fresh cottage cheese chunks cooked in rich onion tomato butter cream gravy.", category: "mains", isVeg: true, image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-203", name: "Garlic Tandoori Naan", price: 69.00, desc: "Soft leavened tandoor-baked flatbread infused with fresh minced garlic and butter.", category: "breads", isVeg: true, image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-204", name: "Jeera Basmati Rice", price: 129.00, desc: "Aromatic long-grain basmati rice steamed with cumin seeds and pure ghee.", category: "breads", isVeg: true, image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=300&q=80" }
         ]
     },
     {
         id: "rest-3",
         name: "Green Garden Cafeteria",
-        cuisine: "lifestyle", // mapped to Veg
+        cuisine: "lifestyle",
         cuisineLabel: "Salads, Juices, Healthy",
-        image: "https://picsum.photos/400/250?random=32",
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80",
         rating: 4.6,
         reviews: 180,
         deliveryTime: 20,
         costForTwo: 350,
         isVegOnly: true,
         menu: [
-            { id: "item-301", name: "Avocado Quinoa Salad", price: 199.00, desc: "Fresh avocado slices, organic quinoa, cherry tomatoes, and cucumber tossed in lemon vinaigrette.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=49" },
-            { id: "item-302", name: "Paneer Pesto Grilled Sandwich", price: 149.00, desc: "Multi-grain toasted bread stuffed with fresh basil pesto sauce, paneer cubes, and cheese.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=50" },
-            { id: "item-303", name: "Detox Green Juice", price: 99.00, desc: "Fresh cold-pressed cucumber, green apple, spinach, celery, mint, and lemon juice.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=51" },
-            { id: "item-304", name: "Energy Fruit Bowl", price: 129.00, desc: "A mix of fresh strawberries, blueberries, kiwi, banana, and pomegranate with honey glaze.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=52" }
+            { id: "item-301", name: "Avocado Quinoa Salad", price: 199.00, desc: "Fresh avocado slices, organic quinoa, cherry tomatoes, and cucumber tossed in lemon vinaigrette.", category: "mains", isVeg: true, image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-302", name: "Paneer Pesto Grilled Sandwich", price: 149.00, desc: "Multi-grain toasted bread stuffed with fresh basil pesto sauce, paneer cubes, and cheese.", category: "mains", isVeg: true, image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-303", name: "Detox Green Juice", price: 99.00, desc: "Fresh cold-pressed cucumber, green apple, spinach, celery, mint, and lemon juice.", category: "drinks", isVeg: true, image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-304", name: "Energy Fruit Bowl", price: 129.00, desc: "A mix of fresh strawberries, blueberries, kiwi, banana, and pomegranate with honey glaze.", category: "desserts", isVeg: true, image: "https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&w=300&q=80" }
         ]
     },
     {
@@ -62,16 +62,16 @@ const restaurantsData = [
         name: "Wok & Roll Asian Kitchen",
         cuisine: "asian",
         cuisineLabel: "Noodles, Sushi, Dimsums",
-        image: "https://picsum.photos/400/250?random=33",
+        image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=400&q=80",
         rating: 4.2,
         reviews: 320,
         deliveryTime: 30,
         costForTwo: 500,
         isVegOnly: false,
         menu: [
-            { id: "item-401", name: "Chili Garlic Hakka Noodles", price: 189.00, desc: "Stir-fried noodles with mixed julienne vegetables, burnt garlic, and red chili paste.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=53" },
-            { id: "item-402", name: "Spicy Schezwan Chicken", price: 249.00, desc: "Tender chicken cubes stir-fried in hot Schezwan pepper sauce with spring onions.", category: "mains", isVeg: false, image: "https://picsum.photos/120/120?random=54" },
-            { id: "item-403", name: "Steamed Vegetable Dumplings", price: 129.00, desc: "Delicate wrappers stuffed with cabbage, carrot, and water chestnuts, steamed to perfection.", category: "appetizers", isVeg: true, image: "https://picsum.photos/120/120?random=55" }
+            { id: "item-401", name: "Chili Garlic Hakka Noodles", price: 189.00, desc: "Stir-fried noodles with mixed julienne vegetables, burnt garlic, and red chili paste.", category: "mains", isVeg: true, image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-402", name: "Spicy Schezwan Chicken", price: 249.00, desc: "Tender chicken cubes stir-fried in hot Schezwan pepper sauce with spring onions.", category: "mains", isVeg: false, image: "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-403", name: "Steamed Dumplings", price: 129.00, desc: "Delicate wrappers stuffed with cabbage, carrot, and water chestnuts, steamed to perfection.", category: "appetizers", isVeg: true, image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=300&q=80" }
         ]
     },
     {
@@ -79,16 +79,16 @@ const restaurantsData = [
         name: "Pizzeria Roma",
         cuisine: "pizza",
         cuisineLabel: "Woodfired Pizzas, Pastas",
-        image: "https://picsum.photos/400/250?random=34",
+        image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80",
         rating: 4.7,
         reviews: 580,
         deliveryTime: 38,
         costForTwo: 700,
         isVegOnly: false,
         menu: [
-            { id: "item-501", name: "Margherita Woodfired Pizza", price: 249.00, desc: "Sourdough crust topped with classic Italian tomato sauce, fresh mozzarella cheese and fresh basil.", category: "pizzas", isVeg: true, image: "https://picsum.photos/120/120?random=56" },
-            { id: "item-502", name: "Double Pepperoni Pizza", price: 349.00, desc: "Rich tomato base loaded with spicy cured beef pepperoni slices and extra mozzarella.", category: "pizzas", isVeg: false, image: "https://picsum.photos/120/120?random=57" },
-            { id: "item-503", name: "Creamy Alfredo Penne Pasta", price: 219.00, desc: "Penne pasta cooked in rich garlic cream parmesan cheese sauce with fresh mushrooms.", category: "mains", isVeg: true, image: "https://picsum.photos/120/120?random=58" }
+            { id: "item-501", name: "Margherita Woodfired Pizza", price: 249.00, desc: "Sourdough crust topped with classic Italian tomato sauce, fresh mozzarella cheese and fresh basil.", category: "pizzas", isVeg: true, image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-502", name: "Double Pepperoni Pizza", price: 349.00, desc: "Rich tomato base loaded with pepperoni slices and extra mozzarella.", category: "pizzas", isVeg: false, image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-503", name: "Creamy Alfredo Penne Pasta", price: 219.00, desc: "Penne pasta cooked in rich garlic cream parmesan cheese sauce with fresh mushrooms.", category: "mains", isVeg: true, image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=300&q=80" }
         ]
     },
     {
@@ -96,16 +96,16 @@ const restaurantsData = [
         name: "Sweet Treats & Waffles",
         cuisine: "dessert",
         cuisineLabel: "Waffles, Ice Creams, Cakes",
-        image: "https://picsum.photos/400/250?random=35",
+        image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80",
         rating: 4.3,
         reviews: 150,
         deliveryTime: 18,
         costForTwo: 300,
         isVegOnly: true,
         menu: [
-            { id: "item-601", name: "Belgian Chocolate Loaded Waffle", price: 149.00, desc: "Crispy freshly baked waffle topped with milk chocolate chips, hot fudge and dark cocoa sauce.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=59" },
-            { id: "item-602", name: "Red Velvet Jar Cake", price: 119.00, desc: "Layered sponge cake with premium cream cheese icing packed in a cute glass jar.", category: "desserts", isVeg: true, image: "https://picsum.photos/120/120?random=60" },
-            { id: "item-603", name: "Cold Brew Affogato", price: 99.00, desc: "A double scoop of vanilla ice cream drowned in a shot of bold cold brew espresso.", category: "drinks", isVeg: true, image: "https://picsum.photos/120/120?random=61" }
+            { id: "item-601", name: "Belgian Waffle with Berries", price: 149.00, desc: "Freshly baked warm Belgian waffle topped with fresh strawberries, blueberries, and maple syrup.", category: "desserts", isVeg: true, image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-602", name: "Classic Red Velvet Slice", price: 119.00, desc: "Rich and moist red velvet cake layer slice topped with velvety cream cheese frosting.", category: "desserts", isVeg: true, image: "https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=300&q=80" },
+            { id: "item-603", name: "Cold Brew Affogato", price: 99.00, desc: "A double scoop of vanilla ice cream drowned in a shot of bold cold brew espresso.", category: "drinks", isVeg: true, image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=300&q=80" }
         ]
     }
 ];
@@ -128,8 +128,65 @@ window.addEventListener("DOMContentLoaded", async () => {
     setupRouter();
     setupFiltersAndToggles();
     setupCheckoutForm();
+    setupHeroCarousel();
     await initAuth();
 });
+
+// Hero Carousel Controller (Vanilla JS autoplay & navigation)
+function setupHeroCarousel() {
+    const carousel = document.getElementById("hero-carousel");
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll(".carousel-slide");
+    const indicators = carousel.querySelectorAll(".indicator-dot");
+    const prevBtn = document.getElementById("carousel-prev-btn");
+    const nextBtn = document.getElementById("carousel-next-btn");
+
+    let currentSlide = 0;
+    let autoplayTimer = null;
+    const autoplayInterval = 5000; // 5 seconds
+
+    function goToSlide(index) {
+        // Remove active class from current slide and indicator
+        slides[currentSlide].classList.remove("active");
+        indicators[currentSlide].classList.remove("active");
+
+        // Set new index
+        currentSlide = (index + slides.length) % slides.length;
+
+        // Add active class to new slide and indicator
+        slides[currentSlide].classList.add("active");
+        indicators[currentSlide].classList.add("active");
+
+        // Restart autoplay timer
+        startAutoplay();
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    function startAutoplay() {
+        if (autoplayTimer) clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(nextSlide, autoplayInterval);
+    }
+
+    // Attach click events to control buttons
+    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+
+    // Attach click events to indicators
+    indicators.forEach((dot, idx) => {
+        dot.addEventListener("click", () => goToSlide(idx));
+    });
+
+    // Start autoplay initially
+    startAutoplay();
+}
 
 // 4. Client-side Router
 function setupRouter() {
@@ -155,6 +212,7 @@ function setupRouter() {
             document.getElementById("view-home").classList.remove("hidden");
             document.querySelectorAll(".nav-btn-link")[0]?.classList.add("active");
             renderFeaturedRestaurants();
+            renderTopDishes();
         } else if (hash === "#restaurants") {
             document.getElementById("view-restaurants").classList.remove("hidden");
             document.querySelectorAll(".nav-btn-link")[0]?.classList.add("active");
@@ -529,6 +587,65 @@ function renderFeaturedRestaurants() {
         </a>
     `).join("");
 }
+
+// A2. Renders 8 Top food/dishes on Landing Page (2 rows of 4)
+function renderTopDishes() {
+    const container = document.getElementById("top-dishes-grid");
+    if (!container) return;
+
+    // Compile a list of all dishes across all restaurants
+    const allDishes = [];
+    restaurantsData.forEach(r => {
+        r.menu.forEach(item => {
+            allDishes.push({
+                ...item,
+                restaurantId: r.id,
+                restaurantName: r.name
+            });
+        });
+    });
+
+    // Let's take a diverse set of 8 dishes
+    const topDishes = allDishes.slice(0, 8); // Take first 8 dishes (2 rows of 4)
+
+    container.innerHTML = topDishes.map(d => `
+        <div class="dish-card">
+            <div class="dish-img-wrap">
+                <img src="${d.image}" alt="${d.name}" class="dish-img" loading="lazy">
+                <span class="dish-rating-badge">
+                    <span class="material-symbols-rounded">star</span>
+                    <span>4.7</span>
+                </span>
+            </div>
+            <div class="dish-info">
+                <div class="dish-header-row">
+                    <div class="veg-indicator" style="margin-bottom:0">
+                        <span class="veg-dot ${d.isVeg ? '' : 'non-veg'}"></span>
+                        <span class="veg-label" style="font-size:0.7rem">${d.isVeg ? 'VEG' : 'NON-VEG'}</span>
+                    </div>
+                    <span class="dish-price">₹${d.price.toFixed(2)}</span>
+                </div>
+                <h3>${d.name}</h3>
+                <p class="dish-restaurant">by ${d.restaurantName}</p>
+                <button class="add-dish-btn" onclick="triggerAddFoodDirect('${d.id}', '${d.restaurantId}', '${d.restaurantName}')">
+                    <span>ADD TO CART</span>
+                    <span class="material-symbols-rounded" style="font-size:0.95rem">add_shopping_cart</span>
+                </button>
+            </div>
+        </div>
+    `).join("");
+}
+
+// Helper to add food directly from home page top dishes list
+window.triggerAddFoodDirect = function(itemId, resId, resName) {
+    const res = restaurantsData.find(r => r.id === resId);
+    if (!res) return;
+    const item = res.menu.find(i => i.id === itemId);
+    if (item) {
+        addToCart(item, resId, resName);
+        renderTopDishes(); // Refresh list to reflect state (though badge animates, standard add is enough)
+    }
+};
 
 // B. Renders Restaurant Listing Grid with working search/cuisines/Veg/Rating filters
 function renderAllRestaurants() {
@@ -934,12 +1051,31 @@ function setupFiltersAndToggles() {
     document.getElementById("toggle-fast-delivery").addEventListener("change", renderAllRestaurants);
 
     const search = document.getElementById("restaurant-search");
-    search.addEventListener("input", () => {
-        if (window.location.hash !== "#restaurants") {
-            window.location.hash = "#restaurants";
-        }
-        renderAllRestaurants();
-    });
+    const globalSearch = document.getElementById("global-food-search");
+
+    if (search) {
+        search.addEventListener("input", () => {
+            if (globalSearch) {
+                globalSearch.value = search.value;
+            }
+            if (window.location.hash !== "#restaurants") {
+                window.location.hash = "#restaurants";
+            }
+            renderAllRestaurants();
+        });
+    }
+
+    if (globalSearch) {
+        globalSearch.addEventListener("input", () => {
+            if (search) {
+                search.value = globalSearch.value;
+            }
+            if (window.location.hash !== "#restaurants") {
+                window.location.hash = "#restaurants";
+            }
+            renderAllRestaurants();
+        });
+    }
 }
 
 // 9. Checkout billing & address validation
