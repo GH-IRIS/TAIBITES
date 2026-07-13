@@ -1,3 +1,5 @@
+///same issue with clerk 404 page after sign in //
+
 # 🍔 TaiBites — Food Delivery App (Front-End)
 
 > Hungry? Browse restaurants → open a menu → add to cart → login with Google → order placed. 🛵
@@ -8,8 +10,7 @@
 🏠 **Landing page** → 🍽 **Restaurant listing** (Veg/Non-veg filter) → 📋 **Menu page** → 🛒 **Cart** (items + delivery fee + grand total) → 🔐 **Google login (Clerk)** → ✅ **Order confirmed!**
 
 ## 📸 Screenshots
-![Restaurant List Page](https://GH-IRIS.github.io/Portfolio/assets/taibites.png)
-![Active Cart & Checkout](https://GH-IRIS.github.io/Portfolio/assets/project_food.jpg)
+![Restaurant List Page](https://github.com/GH-IRIS/TAIBITES/blob/main/taibites.png)
 
 ## ✨ Highlights
 - Add to cart **works from every restaurant's menu**
