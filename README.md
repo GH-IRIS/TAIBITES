@@ -2,14 +2,14 @@
 
 > Hungry? Browse restaurants → open a menu → add to cart → login with Google → order placed. 🛵
 
-🔗 **Live Demo:** https://GH-IRIS.github.io/TAIBITES/ · **Code:** https://github.com/GH-IRIS/TAIBITES
+🔗 **Live Demo:** [https://GH-IRIS.github.io/TAIBITES/](https://GH-IRIS.github.io/TAIBITES/) · **Code:** [https://github.com/GH-IRIS/TAIBITES](https://github.com/GH-IRIS/TAIBITES)
 
 ## 🗺 The user journey
 🏠 **Landing page** → 🍽 **Restaurant listing** (Veg/Non-veg filter) → 📋 **Menu page** → 🛒 **Cart** (items + delivery fee + grand total) → 🔐 **Google login (Clerk)** → ✅ **Order confirmed!**
 
 ## 📸 Screenshots
-![Landing Screen](https://picsum.photos/600/300?random=83)
-![Menu & Cart Screen](https://picsum.photos/600/300?random=84)
+![Restaurant List Page](https://GH-IRIS.github.io/Portfolio/assets/taibites.png)
+![Active Cart & Checkout](https://GH-IRIS.github.io/Portfolio/assets/project_food.jpg)
 
 ## ✨ Highlights
 - Add to cart **works from every restaurant's menu**
@@ -37,7 +37,7 @@ This project was built during my frontend training at **[TAP Academy](https://th
 - 🚀 **Get placed in 60 days** — dedicated placement track with daily placement drives
 - 🥽 **Augmented Reality (AR) classrooms** — concepts you can see, not just read
 - 🎤 **Weekly mock interviews** with real-time feedback
-- 👨🏫 **1-on-1 mentorship** and round-the-clock doubt support
+- 👨‍🏫 **1-on-1 mentorship** and round-the-clock doubt support
 - 💻 Courses in **Java, Python, Full Stack Development, Data Science & AI**
 
 ### ❓ FAQ

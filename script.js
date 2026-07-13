@@ -129,6 +129,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     setupFiltersAndToggles();
     setupCheckoutForm();
     setupHeroCarousel();
+    setupMobileMenu();
     await initAuth();
 });
 
@@ -1128,4 +1129,42 @@ function setupCheckoutForm() {
             window.location.hash = `#order-success?ref=TAIBITES-${randomRef}-G&client=${encodeURIComponent(name)}&total=${totals.grandTotal.toFixed(2)}&address=${encodeURIComponent(address)}`;
         }
     });
+}
+
+// Mobile Hamburger Menu Toggle
+function setupMobileMenu() {
+    const toggleBtn = document.getElementById("mobile-menu-toggle");
+    const navMenu = document.getElementById("nav-menu-wrapper");
+
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle("open");
+            
+            const icon = toggleBtn.querySelector("span");
+            if (navMenu.classList.contains("open")) {
+                icon.textContent = "close";
+            } else {
+                icon.textContent = "menu";
+            }
+        });
+
+        // Close menu when clicking navigation links or buttons
+        navMenu.querySelectorAll(".nav-btn-link, .signin-btn").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                const icon = toggleBtn.querySelector("span");
+                if (icon) icon.textContent = "menu";
+            });
+        });
+
+        // Close menu when clicking outside of navbar
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                navMenu.classList.remove("open");
+                const icon = toggleBtn.querySelector("span");
+                if (icon) icon.textContent = "menu";
+            }
+        });
+    }
 }

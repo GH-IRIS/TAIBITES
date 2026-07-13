@@ -40,23 +40,18 @@
                 <span class="logo-text">Tai<span class="logo-accent">Bites</span></span>
             </a>
 
-            <!-- Global Search Bar -->
-            <div class="search-bar-wrap">
-                <span class="material-symbols-rounded search-icon">search</span>
-                <input type="text" id="global-food-search" placeholder="Search restaurants, dishes, cuisines...">
-            </div>
+            <!-- Collapsible Navigation & Search Wrapper -->
+            <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+                <!-- Global Search Bar -->
+                <div class="search-bar-wrap">
+                    <span class="material-symbols-rounded search-icon">search</span>
+                    <input type="text" id="global-food-search" placeholder="Search restaurants, dishes, cuisines...">
+                </div>
 
-            <!-- Navigation Links -->
-            <div class="header-actions">
+                <!-- Restaurants Action -->
                 <a href="#restaurants" class="nav-btn-link" title="Browse Restaurants">
                     <span class="material-symbols-rounded">restaurant</span>
                     <span>Restaurants</span>
-                </a>
-                
-                <!-- Cart Trigger Badge -->
-                <a href="#cart" class="cart-trigger" id="cart-badge-trigger">
-                    <span class="material-symbols-rounded">shopping_bag</span>
-                    <span class="cart-count-badge hidden" id="cart-count">0</span>
                 </a>
 
                 <!-- Clerk Auth Button Wrapper -->
@@ -90,6 +85,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Right-side actions (Cart & Mobile Toggle) -->
+            <div class="header-right-actions">
+                <!-- Cart Trigger Badge -->
+                <a href="#cart" class="cart-trigger" id="cart-badge-trigger">
+                    <span class="material-symbols-rounded">shopping_bag</span>
+                    <span class="cart-count-badge hidden" id="cart-count">0</span>
+                </a>
+                
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="mobile-toggle-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
             </div>
         </div>
     </header>
